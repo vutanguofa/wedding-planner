@@ -12,7 +12,7 @@ This repo includes a wedding planner app that allows the user to create a guest 
 
 ## Assignment Details
 
-![]()
+![](https://user-images.githubusercontent.com/68674610/104855692-6d486b00-58cb-11eb-8326-b58c207e30f4.png)
 
 ## Heroku
 
