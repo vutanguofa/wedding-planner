@@ -16,6 +16,11 @@ const ReactionForm = ({ thoughtId }) => {
     }
   };
 
+  // refresh page onclick function
+  function refreshPage() {
+    window.location.reload(false);
+  };
+
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -35,23 +40,30 @@ const ReactionForm = ({ thoughtId }) => {
 
   return (
     <div>
-      <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
+      {/* <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
+      </p> */}
       <form
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
+        <input type="radio" name="meal" id="beef" value="beef, " onChange={handleChange} />
+        <label for="beef">Beef</label>
+        <input type="radio" name="meal" id="chicken" value="chicken, " onChange={handleChange} />
+        <label for="chicken">Chicken</label>
+        <input type="radio" name="meal" id="vegan" value="vegan, " onChange={handleChange} />
+        <label for="vegan">Vegan</label>
+
         <textarea
-          placeholder="Leave a reaction to this thought..."
+          placeholder="Enter Guest Name"
           value={reactionBody}
-          className="form-input col-12 col-md-9"
+          className="form-input col-12 col-md-4"
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
+        <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
+          Add Guest
         </button>
       </form>
 

@@ -5,15 +5,15 @@ const ReactionList = ({ reactions }) => {
   return (
     <div className="card mb-3">
       <div className="card-header">
-        <span className="text-light">Reactions</span>
+        <span className="text-light">Guests</span>
       </div>
       <div className="card-body">
         {reactions &&
           reactions.map(reaction => (
             <p className="pill mb-3" key={reaction._id}>
-              {reaction.reactionBody} //{' '}
+              {reaction.reactionBody} {' '}
               <Link to={`/profile/${reaction.username}`} style={{ fontWeight: 700 }}>
-                {reaction.username} on {reaction.createdAt}
+                {/* {reaction.username} on {reaction.createdAt} */}
               </Link>
             </p>
           ))}
