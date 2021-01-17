@@ -9,9 +9,11 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
-import SingleThought from './pages/SingleThought';
+import PhotoGallery from './pages/PhotoGallery';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import SingleThought from './pages/SingleThought';
+import WeddingFund from './pages/WeddingFund';
 
 const client = new ApolloClient({
   request: operation => {
@@ -36,6 +38,8 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/photogallery" component={PhotoGallery} />
+              <Route exact path="/weddingfund" component={WeddingFund} />              
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/thought/:id" component={SingleThought} />

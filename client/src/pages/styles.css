@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+    display: flex;
+}
+
+img {
+    display: inline;
+    cursor: pointer;
+}
+
+.container2 {
+    margin: auto;
+    width: 100%;
+    max-width: 540px;
+}
+
+.container2
+.selected {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border: 4px solid #ffffff;
+}
+
+.container2.imgContainer2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0 0 0;
+}
+
+.container2
+.imgContainer2 img{
+    width: 100px;
+    height: 100px;
+    margin: 0 0;
+    justify-content: center;
+}

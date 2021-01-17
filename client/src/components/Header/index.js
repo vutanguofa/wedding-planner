@@ -17,10 +17,11 @@ const Header = () => {
         </Link>
 
         <nav className="text-center">
-          <Link to="/photogallery">Photo Gallery</Link>
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">Guest List</Link>
+              <Link to="/photogallery">Photo Gallery</Link>
+              <Link to="/weddingfund">Wedding Fund</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>

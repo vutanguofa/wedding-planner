@@ -16,7 +16,7 @@ This repo includes a wedding planner app that allows the user to create a guest 
 
 ## Heroku
 
-[Link to deployed application]()<br />
+[Link to deployed application](https://wedding-planner-vu.herokuapp.com)<br />
 
 ## GitHub
 
