@@ -57,20 +57,27 @@ export default function App() {
   const [selectedImg, setSelectedImg] = useState(Images[0]);
 
   return (
-    <div className="App">
-      <div className="container2">
-        <img src={selectedImg} alt="Selected" className="selected" />
-        <div className="imgContainer2">
-          {Images.map((img, index) => (
-            <img
-              style={{ border: selectedImg === img ? "4px solid pink" : "" }}
-              key={index}
-              src={img}
-              alt="dog"
-              onClick={() => setSelectedImg(img)} />
-          ))}
+
+    <div className="card">
+      <h4 className="card-header">Photo Gallery</h4>
+      <div className="card-body">
+        <div className="App">
+          <div className="container2">
+            <img src={selectedImg} alt="Selected" className="selected" />
+            <div className="imgContainer2">
+              {Images.map((img, index) => (
+                <img
+                  style={{ border: selectedImg === img ? "4px solid pink" : "" }}
+                  key={index}
+                  src={img}
+                  alt="dog"
+                  onClick={() => setSelectedImg(img)} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   )
 }

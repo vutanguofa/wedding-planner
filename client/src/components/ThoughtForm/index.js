@@ -69,11 +69,14 @@ const ThoughtForm = () => {
         <textarea
           placeholder="Enter Family Name"
           value={thoughtText}
-          className="form-input col-12 col-md-9"
+          className="form-input col-5 col-md-5"
           onChange={handleChange}
         ></textarea>
         <button className="btn col-12 col-md-3" type="submit">
           Add Family
+        </button>
+        <button className="btn col-12 col-md-3" type="submit">
+          Remove Family
         </button>
       </form>
     </div>

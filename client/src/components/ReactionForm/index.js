@@ -48,25 +48,22 @@ const ReactionForm = ({ thoughtId }) => {
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
-        <input type="radio" name="meal" id="beef" value="beef, " onChange={handleChange} />
-        <label for="beef">Beef</label>
-        <input type="radio" name="meal" id="chicken" value="chicken, " onChange={handleChange} />
-        <label for="chicken">Chicken</label>
-        <input type="radio" name="meal" id="vegan" value="vegan, " onChange={handleChange} />
-        <label for="vegan">Vegan</label>
 
         <textarea
           placeholder="Enter Guest Name"
           value={reactionBody}
-          className="form-input col-12 col-md-4"
+          className="form-input col-12 col-md-6"
           onChange={handleChange}
         ></textarea>
 
         <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
           Add Guest
         </button>
+        <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
+          Remove Guest
+        </button>
       </form>
-
+      <span class="m-5"></span>
       {error && <div>Something went wrong...</div>}
     </div>
   );
