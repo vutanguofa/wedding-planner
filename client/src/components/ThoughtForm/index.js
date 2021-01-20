@@ -39,6 +39,11 @@ const ThoughtForm = () => {
     }
   };
 
+      // refresh page onclick function
+      function refreshPage() {
+        window.location.reload(false);
+      };
+
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -75,7 +80,7 @@ const ThoughtForm = () => {
         <button className="btn col-12 col-md-3 cursive" type="submit">
           Add Family
         </button>
-        <button className="btn col-12 col-md-3 cursive" type="submit">
+        <button className="btn col-12 col-md-3 cursive" type="submit" onClick={refreshPage}>
           Remove Family
         </button>
       </form>

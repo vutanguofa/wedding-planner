@@ -149,6 +149,16 @@ ul{
   color: var(--dark);
 }
 
+.card2 {
+  margin: 0 20px 20px 0;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  background-color: var(--light);
+  color: var(--dark);
+  width: 200px;
+  display: inline-block;
+}
+
 .card-header {
   color: var(--secondary);
   margin: 0;
@@ -160,6 +170,7 @@ ul{
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+  background-color: pink;
 }
 
 /* FORM */
@@ -183,6 +194,9 @@ ul{
   border-radius: var(--border-radius);
 }
 
+.bbgc {
+  background-color: pink;
+}
 [type='radio']:checked,
 [type='radio']:not(:checked) {
   position: absolute;

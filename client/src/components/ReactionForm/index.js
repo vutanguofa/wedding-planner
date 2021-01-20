@@ -63,7 +63,7 @@ const ReactionForm = ({ thoughtId }) => {
           Remove Guest
         </button>
       </form>
-      <span class="m-5"></span>
+      <span className="m-5"></span>
       {error && <div>Something went wrong...</div>}
     </div>
   );
