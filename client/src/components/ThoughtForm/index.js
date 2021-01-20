@@ -6,9 +6,9 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 const ThoughtForm = () => {
   const [thoughtText, setText] = useState('');
-  const [characterCount, setCharacterCount] = useState(0);
+  // const [characterCount, setCharacterCount] = useState(0);
 
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+  const [addThought] = useMutation(ADD_THOUGHT, {
     update(cache, { data: { addThought } }) {
       try {
         // update thought array's cache
@@ -35,7 +35,7 @@ const ThoughtForm = () => {
   const handleChange = event => {
     if (event.target.value.length <= 280) {
       setText(event.target.value);
-      setCharacterCount(event.target.value.length);
+      // setCharacterCount(event.target.value.length);
     }
   };
 
@@ -50,7 +50,7 @@ const ThoughtForm = () => {
 
       // clear form value
       setText('');
-      setCharacterCount(0);
+      // setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
@@ -63,19 +63,19 @@ const ThoughtForm = () => {
         {error && <span className="ml-2">Something went wrong...</span>}
       </p> */}
       <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
+        className="flex-row justify-center justify-space-between-md align-stretch cursive"
         onSubmit={handleFormSubmit}
       >
         <textarea
           placeholder="Enter Family Name"
           value={thoughtText}
-          className="form-input col-5 col-md-5"
+          className="form-input col-5 col-md-5 cursive"
           onChange={handleChange}
         ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn col-12 col-md-3 cursive" type="submit">
           Add Family
         </button>
-        <button className="btn col-12 col-md-3" type="submit">
+        <button className="btn col-12 col-md-3 cursive" type="submit">
           Remove Family
         </button>
       </form>

@@ -5,14 +5,14 @@ import { ADD_REACTION } from '../../utils/mutations';
 
 const ReactionForm = ({ thoughtId }) => {
   const [reactionBody, setBody] = useState('');
-  const [characterCount, setCharacterCount] = useState(0);
+  // const [characterCount, setCharacterCount] = useState(0);
   const [addReaction, { error }] = useMutation(ADD_REACTION);
 
   // update state based on form input changes
   const handleChange = event => {
     if (event.target.value.length <= 280) {
       setBody(event.target.value);
-      setCharacterCount(event.target.value.length);
+      // setCharacterCount(event.target.value.length);
     }
   };
 
@@ -32,7 +32,7 @@ const ReactionForm = ({ thoughtId }) => {
 
       // clear form value
       setBody('');
-      setCharacterCount(0);
+      // setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
@@ -52,14 +52,14 @@ const ReactionForm = ({ thoughtId }) => {
         <textarea
           placeholder="Enter Guest Name"
           value={reactionBody}
-          className="form-input col-12 col-md-6"
+          className="form-input col-12 col-md-6 cursive"
           onChange={handleChange}
         ></textarea>
 
-        <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
+        <button className="btn col-12 col-md-3 cursive" type="submit" onClick={refreshPage}>
           Add Guest
         </button>
-        <button className="btn col-12 col-md-3" type="submit" onClick={refreshPage}>
+        <button className="btn col-12 col-md-3 cursive" type="submit" onClick={refreshPage}>
           Remove Guest
         </button>
       </form>

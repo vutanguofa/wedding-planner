@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
-    return <h3>No guests added yet!</h3>;
+    return <h3 className="cursive">No families added yet!</h3>;
   }
 
   return (
@@ -11,7 +11,7 @@ const ThoughtList = ({ thoughts, title }) => {
       <h3>{title}</h3>
       {thoughts &&
         thoughts.map(thought => (
-          <div key={thought._id} className="card mb-3">
+          <div key={thought._id} className="card mb-3 cursive">
             <p className="card-header">
               <Link
                 to={`/profile/${thought.username}`}

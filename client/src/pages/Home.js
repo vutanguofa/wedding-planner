@@ -5,13 +5,13 @@ import wedding from '../assets/wedding-pic.jpg';
 // import FriendList from '../components/FriendList';
 
 import Auth from '../utils/auth';
-import { useQuery } from '@apollo/react-hooks';
-import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
+// import { useQuery } from '@apollo/react-hooks';
+// import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  // const { loading, data } = useQuery(QUERY_THOUGHTS);
+  // const { data: userData } = useQuery(QUERY_ME_BASIC);
+  // const thoughts = data?.thoughts || [];
 
   const loggedIn = Auth.loggedIn();
 
@@ -43,7 +43,7 @@ const Home = () => {
             </p>
             <span class="mb-3"></span>
           </div>}
-        {loggedIn && userData ? (
+        {loggedIn ? (
           <div className="col-12 col-lg-3 mb-3">
             {/* <FriendList
               username={userData.me.username}
